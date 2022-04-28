@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GetFocused_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" id="FSc-ZN-pQK"/>
+                        <button width="1" alignment="left" title="Button" id="f5v-ZK-d98">
+                            <connections>
+                                <action selector="pushNotify" destination="AgC-eL-Hgc" id="2P6-7d-9Q1"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="showText" destination="FSc-ZN-pQK" id="2Fx-Rm-mFD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="Mhz-o6-Wd4" kind="relationship" relationship="dynamicNotificationInterface" id="cHu-01-0iF"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="677"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="B50-id-8pN">
+            <objects>
+                <controller id="Mhz-o6-Wd4" customClass="NotificationController" customModule="GetFocused_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="gpm-Z0-wur"/>
+                        <label alignment="left" text="Label" id="RCz-KD-bOi"/>
+                    </items>
+                    <connections>
+                        <outlet property="subTitleLabel" destination="RCz-KD-bOi" id="2un-cl-sB5"/>
+                        <outlet property="titleLabel" destination="gpm-Z0-wur" id="r5U-OK-zf5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="520" y="677"/>
+        </scene>
+    </scenes>
+</document>

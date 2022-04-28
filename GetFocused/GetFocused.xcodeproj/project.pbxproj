@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F9C6D32281784EA00CF1FE5 /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C6D31281784EA00CF1FE5 /* TimerExtension.swift */; };
+		9FEE46A628158983005BD79C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46A528158983005BD79C /* AppDelegate.swift */; };
+		9FEE46A828158983005BD79C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46A728158983005BD79C /* SceneDelegate.swift */; };
+		9FEE46AA28158983005BD79C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46A928158983005BD79C /* ViewController.swift */; };
+		9FEE46AD28158983005BD79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46AB28158983005BD79C /* Main.storyboard */; };
+		9FEE46AF28158985005BD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46AE28158985005BD79C /* Assets.xcassets */; };
+		9FEE46B228158985005BD79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46B028158985005BD79C /* LaunchScreen.storyboard */; };
+		9FEE46B728158985005BD79C /* GetFocused WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9FEE46B628158985005BD79C /* GetFocused WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9FEE46BD28158985005BD79C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46BB28158985005BD79C /* Interface.storyboard */; };
+		9FEE46BF28158987005BD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46BE28158987005BD79C /* Assets.xcassets */; };
+		9FEE46C528158987005BD79C /* GetFocused WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9FEE46C428158987005BD79C /* GetFocused WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9FEE46CA28158987005BD79C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46C928158987005BD79C /* InterfaceController.swift */; };
+		9FEE46CC28158987005BD79C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46CB28158987005BD79C /* ExtensionDelegate.swift */; };
+		9FEE46CE28158987005BD79C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46CD28158987005BD79C /* NotificationController.swift */; };
+		9FEE46D028158987005BD79C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46CF28158987005BD79C /* ComplicationController.swift */; };
+		9FEE46D228158989005BD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE46D128158989005BD79C /* Assets.xcassets */; };
+		9FEE470C28158E68005BD79C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE470A28158E68005BD79C /* MusicViewController.swift */; };
+		9FEE470D28158E68005BD79C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE470B28158E68005BD79C /* TimerViewController.swift */; };
+		9FEE47162815D82F005BD79C /* Classical Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE470F2815D82E005BD79C /* Classical Piano.mp3 */; };
+		9FEE47172815D82F005BD79C /* Lofi Hiphop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47102815D82E005BD79C /* Lofi Hiphop.mp3 */; };
+		9FEE47182815D82F005BD79C /* Piano e Violin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47112815D82E005BD79C /* Piano e Violin.mp3 */; };
+		9FEE47192815D82F005BD79C /* Rain Sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47122815D82E005BD79C /* Rain Sounds.mp3 */; };
+		9FEE471A2815D82F005BD79C /* Lofi Sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47132815D82E005BD79C /* Lofi Sounds.mp3 */; };
+		9FEE471B2815D82F005BD79C /* Ocean Sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47142815D82E005BD79C /* Ocean Sounds.mp3 */; };
+		9FEE471C2815D82F005BD79C /* Soft Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47152815D82E005BD79C /* Soft Piano.mp3 */; };
+		9FEE471E2815DAAC005BD79C /* Synth and Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE471D2815DAAC005BD79C /* Synth and Piano.mp3 */; };
+		9FEE47202815DAC2005BD79C /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE471F2815DAC2005BD79C /* Piano.mp3 */; };
+		9FEE47222815DAE0005BD79C /* LoFi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47212815DAE0005BD79C /* LoFi.mp3 */; };
+		9FEE47242815DB08005BD79C /* Synth Sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47232815DB08005BD79C /* Synth Sounds.mp3 */; };
+		9FEE47262815DC2A005BD79C /* Sonata No.1 in F-Minor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE47252815DC2A005BD79C /* Sonata No.1 in F-Minor.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FEE46B828158985005BD79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FEE469A28158983005BD79C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FEE46B528158985005BD79C;
+			remoteInfo = "GetFocused WatchKit App";
+		};
+		9FEE46C628158987005BD79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FEE469A28158983005BD79C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FEE46C328158987005BD79C;
+			remoteInfo = "GetFocused WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FEE46DA28158989005BD79C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9FEE46C528158987005BD79C /* GetFocused WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEE46DE28158989005BD79C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9FEE46B728158985005BD79C /* GetFocused WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9F9C6D31281784EA00CF1FE5 /* TimerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
+		9FEE46A228158983005BD79C /* GetFocused.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFocused.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FEE46A528158983005BD79C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FEE46A728158983005BD79C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9FEE46A928158983005BD79C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FEE46AC28158983005BD79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FEE46AE28158985005BD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FEE46B128158985005BD79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FEE46B328158985005BD79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEE46B628158985005BD79C /* GetFocused WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GetFocused WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FEE46BC28158985005BD79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9FEE46BE28158987005BD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FEE46C428158987005BD79C /* GetFocused WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GetFocused WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FEE46C928158987005BD79C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9FEE46CB28158987005BD79C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9FEE46CD28158987005BD79C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9FEE46CF28158987005BD79C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9FEE46D128158989005BD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FEE46D328158989005BD79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEE46D428158989005BD79C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9FEE470A28158E68005BD79C /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		9FEE470B28158E68005BD79C /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		9FEE470F2815D82E005BD79C /* Classical Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Classical Piano.mp3"; sourceTree = "<group>"; };
+		9FEE47102815D82E005BD79C /* Lofi Hiphop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lofi Hiphop.mp3"; sourceTree = "<group>"; };
+		9FEE47112815D82E005BD79C /* Piano e Violin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Piano e Violin.mp3"; sourceTree = "<group>"; };
+		9FEE47122815D82E005BD79C /* Rain Sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rain Sounds.mp3"; sourceTree = "<group>"; };
+		9FEE47132815D82E005BD79C /* Lofi Sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lofi Sounds.mp3"; sourceTree = "<group>"; };
+		9FEE47142815D82E005BD79C /* Ocean Sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ocean Sounds.mp3"; sourceTree = "<group>"; };
+		9FEE47152815D82E005BD79C /* Soft Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soft Piano.mp3"; sourceTree = "<group>"; };
+		9FEE471D2815DAAC005BD79C /* Synth and Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Synth and Piano.mp3"; sourceTree = "<group>"; };
+		9FEE471F2815DAC2005BD79C /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Piano.mp3; sourceTree = "<group>"; };
+		9FEE47212815DAE0005BD79C /* LoFi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LoFi.mp3; sourceTree = "<group>"; };
+		9FEE47232815DB08005BD79C /* Synth Sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Synth Sounds.mp3"; sourceTree = "<group>"; };
+		9FEE47252815DC2A005BD79C /* Sonata No.1 in F-Minor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sonata No.1 in F-Minor.mp3"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FEE469F28158983005BD79C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEE46C128158987005BD79C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FEE469928158983005BD79C = {
+			isa = PBXGroup;
+			children = (
+				9FEE470E2815D82E005BD79C /* Music */,
+				9FEE46A428158983005BD79C /* GetFocused */,
+				9FEE46BA28158985005BD79C /* GetFocused WatchKit App */,
+				9FEE46C828158987005BD79C /* GetFocused WatchKit Extension */,
+				9FEE46A328158983005BD79C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FEE46A328158983005BD79C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE46A228158983005BD79C /* GetFocused.app */,
+				9FEE46B628158985005BD79C /* GetFocused WatchKit App.app */,
+				9FEE46C428158987005BD79C /* GetFocused WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FEE46A428158983005BD79C /* GetFocused */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE46A528158983005BD79C /* AppDelegate.swift */,
+				9FEE46A728158983005BD79C /* SceneDelegate.swift */,
+				9FEE470A28158E68005BD79C /* MusicViewController.swift */,
+				9FEE470B28158E68005BD79C /* TimerViewController.swift */,
+				9F9C6D31281784EA00CF1FE5 /* TimerExtension.swift */,
+				9FEE46A928158983005BD79C /* ViewController.swift */,
+				9FEE46AB28158983005BD79C /* Main.storyboard */,
+				9FEE46AE28158985005BD79C /* Assets.xcassets */,
+				9FEE46B028158985005BD79C /* LaunchScreen.storyboard */,
+				9FEE46B328158985005BD79C /* Info.plist */,
+			);
+			path = GetFocused;
+			sourceTree = "<group>";
+		};
+		9FEE46BA28158985005BD79C /* GetFocused WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE46BB28158985005BD79C /* Interface.storyboard */,
+				9FEE46BE28158987005BD79C /* Assets.xcassets */,
+			);
+			path = "GetFocused WatchKit App";
+			sourceTree = "<group>";
+		};
+		9FEE46C828158987005BD79C /* GetFocused WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE46C928158987005BD79C /* InterfaceController.swift */,
+				9FEE46CB28158987005BD79C /* ExtensionDelegate.swift */,
+				9FEE46CD28158987005BD79C /* NotificationController.swift */,
+				9FEE46CF28158987005BD79C /* ComplicationController.swift */,
+				9FEE46D128158989005BD79C /* Assets.xcassets */,
+				9FEE46D328158989005BD79C /* Info.plist */,
+				9FEE46D428158989005BD79C /* PushNotificationPayload.apns */,
+			);
+			path = "GetFocused WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9FEE470E2815D82E005BD79C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE471D2815DAAC005BD79C /* Synth and Piano.mp3 */,
+				9FEE471F2815DAC2005BD79C /* Piano.mp3 */,
+				9FEE470F2815D82E005BD79C /* Classical Piano.mp3 */,
+				9FEE47102815D82E005BD79C /* Lofi Hiphop.mp3 */,
+				9FEE47232815DB08005BD79C /* Synth Sounds.mp3 */,
+				9FEE47112815D82E005BD79C /* Piano e Violin.mp3 */,
+				9FEE47122815D82E005BD79C /* Rain Sounds.mp3 */,
+				9FEE47132815D82E005BD79C /* Lofi Sounds.mp3 */,
+				9FEE47212815DAE0005BD79C /* LoFi.mp3 */,
+				9FEE47142815D82E005BD79C /* Ocean Sounds.mp3 */,
+				9FEE47252815DC2A005BD79C /* Sonata No.1 in F-Minor.mp3 */,
+				9FEE47152815D82E005BD79C /* Soft Piano.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FEE46A128158983005BD79C /* GetFocused */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FEE46DF28158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused" */;
+			buildPhases = (
+				9FEE469E28158983005BD79C /* Sources */,
+				9FEE469F28158983005BD79C /* Frameworks */,
+				9FEE46A028158983005BD79C /* Resources */,
+				9FEE46DE28158989005BD79C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FEE46B928158985005BD79C /* PBXTargetDependency */,
+			);
+			name = GetFocused;
+			productName = GetFocused;
+			productReference = 9FEE46A228158983005BD79C /* GetFocused.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FEE46B528158985005BD79C /* GetFocused WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FEE46DB28158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused WatchKit App" */;
+			buildPhases = (
+				9FEE46B428158985005BD79C /* Resources */,
+				9FEE46DA28158989005BD79C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FEE46C728158987005BD79C /* PBXTargetDependency */,
+			);
+			name = "GetFocused WatchKit App";
+			productName = "GetFocused WatchKit App";
+			productReference = 9FEE46B628158985005BD79C /* GetFocused WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9FEE46C328158987005BD79C /* GetFocused WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FEE46D728158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused WatchKit Extension" */;
+			buildPhases = (
+				9FEE46C028158987005BD79C /* Sources */,
+				9FEE46C128158987005BD79C /* Frameworks */,
+				9FEE46C228158987005BD79C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GetFocused WatchKit Extension";
+			productName = "GetFocused WatchKit Extension";
+			productReference = 9FEE46C428158987005BD79C /* GetFocused WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FEE469A28158983005BD79C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					9FEE46A128158983005BD79C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					9FEE46B528158985005BD79C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					9FEE46C328158987005BD79C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9FEE469D28158983005BD79C /* Build configuration list for PBXProject "GetFocused" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FEE469928158983005BD79C;
+			productRefGroup = 9FEE46A328158983005BD79C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FEE46A128158983005BD79C /* GetFocused */,
+				9FEE46B528158985005BD79C /* GetFocused WatchKit App */,
+				9FEE46C328158987005BD79C /* GetFocused WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FEE46A028158983005BD79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEE47192815D82F005BD79C /* Rain Sounds.mp3 in Resources */,
+				9FEE46B228158985005BD79C /* LaunchScreen.storyboard in Resources */,
+				9FEE471B2815D82F005BD79C /* Ocean Sounds.mp3 in Resources */,
+				9FEE46AF28158985005BD79C /* Assets.xcassets in Resources */,
+				9FEE471A2815D82F005BD79C /* Lofi Sounds.mp3 in Resources */,
+				9FEE46AD28158983005BD79C /* Main.storyboard in Resources */,
+				9FEE47242815DB08005BD79C /* Synth Sounds.mp3 in Resources */,
+				9FEE47202815DAC2005BD79C /* Piano.mp3 in Resources */,
+				9FEE47162815D82F005BD79C /* Classical Piano.mp3 in Resources */,
+				9FEE47172815D82F005BD79C /* Lofi Hiphop.mp3 in Resources */,
+				9FEE47182815D82F005BD79C /* Piano e Violin.mp3 in Resources */,
+				9FEE471E2815DAAC005BD79C /* Synth and Piano.mp3 in Resources */,
+				9FEE471C2815D82F005BD79C /* Soft Piano.mp3 in Resources */,
+				9FEE47262815DC2A005BD79C /* Sonata No.1 in F-Minor.mp3 in Resources */,
+				9FEE47222815DAE0005BD79C /* LoFi.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEE46B428158985005BD79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEE46BF28158987005BD79C /* Assets.xcassets in Resources */,
+				9FEE46BD28158985005BD79C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEE46C228158987005BD79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEE46D228158989005BD79C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FEE469E28158983005BD79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEE470D28158E68005BD79C /* TimerViewController.swift in Sources */,
+				9FEE470C28158E68005BD79C /* MusicViewController.swift in Sources */,
+				9FEE46AA28158983005BD79C /* ViewController.swift in Sources */,
+				9FEE46A628158983005BD79C /* AppDelegate.swift in Sources */,
+				9FEE46A828158983005BD79C /* SceneDelegate.swift in Sources */,
+				9F9C6D32281784EA00CF1FE5 /* TimerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEE46C028158987005BD79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEE46CE28158987005BD79C /* NotificationController.swift in Sources */,
+				9FEE46D028158987005BD79C /* ComplicationController.swift in Sources */,
+				9FEE46CC28158987005BD79C /* ExtensionDelegate.swift in Sources */,
+				9FEE46CA28158987005BD79C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FEE46B928158985005BD79C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FEE46B528158985005BD79C /* GetFocused WatchKit App */;
+			targetProxy = 9FEE46B828158985005BD79C /* PBXContainerItemProxy */;
+		};
+		9FEE46C728158987005BD79C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FEE46C328158987005BD79C /* GetFocused WatchKit Extension */;
+			targetProxy = 9FEE46C628158987005BD79C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FEE46AB28158983005BD79C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FEE46AC28158983005BD79C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FEE46B028158985005BD79C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FEE46B128158985005BD79C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9FEE46BB28158985005BD79C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FEE46BC28158985005BD79C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FEE46D528158989005BD79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FEE46D628158989005BD79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9FEE46D828158989005BD79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GetFocused WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "GetFocused WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GetFocused_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = GetFocused_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		9FEE46D928158989005BD79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GetFocused WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "GetFocused WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GetFocused_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = GetFocused_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		9FEE46DC28158989005BD79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = GetFocused_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "GetFocused WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Jeanai-Roberts.GetFocused";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		9FEE46DD28158989005BD79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = GetFocused_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "GetFocused WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Jeanai-Roberts.GetFocused";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		9FEE46E028158989005BD79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetFocused/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FEE46E128158989005BD79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z356P7658;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetFocused/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeanai-Roberts.GetFocused";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FEE469D28158983005BD79C /* Build configuration list for PBXProject "GetFocused" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FEE46D528158989005BD79C /* Debug */,
+				9FEE46D628158989005BD79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FEE46D728158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FEE46D828158989005BD79C /* Debug */,
+				9FEE46D928158989005BD79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FEE46DB28158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FEE46DC28158989005BD79C /* Debug */,
+				9FEE46DD28158989005BD79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FEE46DF28158989005BD79C /* Build configuration list for PBXNativeTarget "GetFocused" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FEE46E028158989005BD79C /* Debug */,
+				9FEE46E128158989005BD79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FEE469A28158983005BD79C /* Project object */;
+}
