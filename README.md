@@ -23,5 +23,3 @@ The user recives the notifications when the timers or stopwatch have been starte
 watchOS
 
 Upcoming I will focus on implemnting the functionality for the user to interact with the timers and stopwatch. As well, as implementing the music functionality.
-
-## Link to Repo
