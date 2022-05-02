@@ -14,6 +14,10 @@ extension TimerViewController{
     // Req. WCSession Delegate Protocol methods
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if let currentSession = self.session, currentSession.isReachable{
+            let data : [String: TimeInterval] = ["phoneTimer": interval]
+            currentSession.sendMessage(data, replyHandler: nil)
+        }
         
         
     }

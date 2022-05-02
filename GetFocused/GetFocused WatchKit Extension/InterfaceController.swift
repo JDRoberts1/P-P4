@@ -13,10 +13,13 @@ import UIKit
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotificationCenterDelegate {
     
-    
+    var isTimerRunning = false
     let session = WCSession.default
     @IBOutlet weak var showText: WKInterfaceLabel!
-    
+    @IBOutlet weak var currentTimerView: WKInterfaceGroup!
+    @IBOutlet weak var newTimerView: WKInterfaceGroup!
+    var bttnId: String!
+    var interval : TimeInterval!
     
     
     override func awake(withContext context: Any?) {
@@ -25,8 +28,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
         session.delegate = self
         session.activate()
         
-    
-        
+        // Request permisison from the user to send notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
             if success{
                 print("Permission Granted")
@@ -40,6 +42,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
                 print(error.localizedDescription)
             }
         }
+        
+        // Button view is based on if there is a current timer already running
+       updateView()
     }
     
     //ADDED FOR NOTIFICATIONS
@@ -63,7 +68,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
         
+        if let timeMessage = message["phoneTimer"] as? TimeInterval{
+            bttnId = "phoneTimer"
+            interval = timeMessage
+            isTimerRunning = true
+            updateView()
+            
+            
+            
+        }
+        
         if let startAlert = message["startAlert"] as? String{
+            
+            isTimerRunning = true
+            updateView()
             
             alertContent.title = "Focus Started"
             alertContent.subtitle = startAlert
@@ -81,6 +99,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
         
         if let endAlert = message["endAlert"] as? String{
             
+            isTimerRunning = false
+            updateView()
             alertContent.title = "Focus Ended"
             alertContent.subtitle = endAlert
             alertContent.sound = .default
@@ -112,6 +132,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
         
     }
     
+    func updateView(){
+        if isTimerRunning == true{
+            currentTimerView.setHidden(false)
+            newTimerView.setHidden(true)
+        }
+        else if isTimerRunning == false{
+            currentTimerView.setHidden(true)
+            newTimerView.setHidden(false)
+        }
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         
@@ -122,6 +153,46 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, UNUserNotif
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    @IBAction func stopwatchToTimer() {
+        
+        pushController(withName: "watchTimer", context: "stopwatch")
+        
+    }
+    
+    @IBAction func newTimerToTimer() {
+        
+        
+        pushController(withName: "watchTimer", context: "newTimer")
+        
+    }
+    
+    @IBAction func focusSessionToTimer() {
+        
+       
+        pushController(withName: "watchTimer", context: "focusSession")
+        
+    }
+       
+    @IBAction func shortBreakToTimer() {
+        
+        
+        pushController(withName: "watchTimer", context: "shortBreak")
+        
+    }
+    
+    @IBAction func longBreakToTimer() {
+        
+        pushController(withName: "watchTimer", context: "longBreak")
+        
+    }
+    
+    @IBAction func viewCurrentTimer() {
+        
+        let context = [bttnId: interval]
+        pushController(withName: "watchTimer", context: context)
         
     }
     

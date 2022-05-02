@@ -212,7 +212,6 @@ class TimerViewController: UIViewController, WCSessionDelegate{
     // MARK: Start timer method
     func startTimer(){
         
-        startAlertsToWatch()
         
         if tag == 0{
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(stopwatchDisplay), userInfo: nil, repeats: true)

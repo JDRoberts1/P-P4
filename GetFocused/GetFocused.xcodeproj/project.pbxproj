@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F203456281EF593007DA99E /* WatchTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F203455281EF593007DA99E /* WatchTimerController.swift */; };
+		9F203458281EF5F4007DA99E /* WatchMusicContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F203457281EF5F4007DA99E /* WatchMusicContoller.swift */; };
 		9F9C6D32281784EA00CF1FE5 /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C6D31281784EA00CF1FE5 /* TimerExtension.swift */; };
 		9FEE46A628158983005BD79C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46A528158983005BD79C /* AppDelegate.swift */; };
 		9FEE46A828158983005BD79C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE46A728158983005BD79C /* SceneDelegate.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F203455281EF593007DA99E /* WatchTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerController.swift; sourceTree = "<group>"; };
+		9F203457281EF5F4007DA99E /* WatchMusicContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMusicContoller.swift; sourceTree = "<group>"; };
 		9F9C6D31281784EA00CF1FE5 /* TimerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
 		9FEE46A228158983005BD79C /* GetFocused.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFocused.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEE46A528158983005BD79C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		9FEE46C828158987005BD79C /* GetFocused WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9F203455281EF593007DA99E /* WatchTimerController.swift */,
+				9F203457281EF5F4007DA99E /* WatchMusicContoller.swift */,
 				9FEE46C928158987005BD79C /* InterfaceController.swift */,
 				9FEE46CB28158987005BD79C /* ExtensionDelegate.swift */,
 				9FEE46CD28158987005BD79C /* NotificationController.swift */,
@@ -376,6 +382,8 @@
 				9FEE46CE28158987005BD79C /* NotificationController.swift in Sources */,
 				9FEE46D028158987005BD79C /* ComplicationController.swift in Sources */,
 				9FEE46CC28158987005BD79C /* ExtensionDelegate.swift in Sources */,
+				9F203456281EF593007DA99E /* WatchTimerController.swift in Sources */,
+				9F203458281EF5F4007DA99E /* WatchMusicContoller.swift in Sources */,
 				9FEE46CA28158987005BD79C /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

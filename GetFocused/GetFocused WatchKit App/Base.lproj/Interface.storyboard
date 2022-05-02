@@ -6,24 +6,113 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--selectionView-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GetFocused_WatchKit_App" customModuleProvider="target">
+                <controller identifier="selectionView" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GetFocused_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Label" id="FSc-ZN-pQK"/>
-                        <button width="1" alignment="left" title="Button" id="f5v-ZK-d98">
+                        <group width="1" alignment="left" layout="vertical" id="MhC-7T-DiZ">
+                            <items>
+                                <button width="1" alignment="left" title="Stopwatch" id="X2a-NQ-4eT">
+                                    <connections>
+                                        <action selector="stopwatchToTimer" destination="AgC-eL-Hgc" id="CCd-mm-YLE"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="New Timer" id="OgZ-YO-o7a">
+                                    <connections>
+                                        <action selector="newTimerToTimer" destination="AgC-eL-Hgc" id="zxX-sG-XRW"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Focus Session" id="cCU-Pe-PAZ">
+                                    <connections>
+                                        <action selector="focusSessionToTimer" destination="AgC-eL-Hgc" id="Scj-QM-gn0"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Short Break" id="LMe-lW-hCh">
+                                    <connections>
+                                        <action selector="shortBreakToTimer" destination="AgC-eL-Hgc" id="KTA-Cv-AHB"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Long Break" id="Zur-4h-f3L">
+                                    <connections>
+                                        <action selector="longBreakToTimer" destination="AgC-eL-Hgc" id="p3C-Ie-5ex"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="kxg-yP-bf9">
+                            <items>
+                                <button width="1" alignment="left" title="View Current Timer" id="c23-oE-WaE">
+                                    <connections>
+                                        <action selector="viewCurrentTimer" destination="AgC-eL-Hgc" id="o0j-Dd-b3Z"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Study Music" id="UuS-gr-vnE">
                             <connections>
-                                <action selector="pushNotify" destination="AgC-eL-Hgc" id="2P6-7d-9Q1"/>
+                                <segue destination="3LQ-rq-PAX" kind="push" id="NMM-yo-CRT"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
+                        <outlet property="currentTimerView" destination="kxg-yP-bf9" id="hy3-vF-QsM"/>
+                        <outlet property="newTimerView" destination="MhC-7T-DiZ" id="epE-46-j1T"/>
                         <outlet property="showText" destination="FSc-ZN-pQK" id="2Fx-Rm-mFD"/>
+                        <segue destination="3Dc-RA-hJE" kind="relationship" relationship="nextPage" id="gni-Ns-Oyh"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="176" y="-381"/>
+        </scene>
+        <!--watchTimer-->
+        <scene sceneID="h2y-md-ONA">
+            <objects>
+                <controller identifier="watchTimer" id="3Dc-RA-hJE" customClass="WatchTimerController" customModule="GetFocused_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="r8P-O9-EUj">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <picker height="100" alignment="left" id="M6r-Jn-ssX"/>
+                        <group width="1" alignment="left" id="Bmf-dH-lkG">
+                            <items>
+                                <button alignment="left" backgroundImage="stop.fill" catalog="system" id="z1x-bi-eW5">
+                                    <connections>
+                                        <action selector="stopTimer" destination="3Dc-RA-hJE" id="bYQ-b8-dab"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" verticalAlignment="center" backgroundImage="play.fill" catalog="system" id="qZg-VR-M0d">
+                                    <connections>
+                                        <action selector="playTimer" destination="3Dc-RA-hJE" id="QK5-MG-orr"/>
+                                    </connections>
+                                </button>
+                                <button alignment="right" verticalAlignment="center" backgroundImage="pause.fill" catalog="system" id="vLK-cR-PVE">
+                                    <connections>
+                                        <action selector="pauseTimer" destination="3Dc-RA-hJE" id="pY5-lm-xGr"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="timePicker" destination="M6r-Jn-ssX" id="XCa-6S-tOj"/>
+                        <outlet property="timerLabel" destination="r8P-O9-EUj" id="9di-Bl-iVK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="590" y="-382"/>
+        </scene>
+        <!--Watch Music Contoller-->
+        <scene sceneID="M1B-Nx-8Tk">
+            <objects>
+                <controller id="3LQ-rq-PAX" customClass="WatchMusicContoller" customModule="GetFocused_WatchKit_Extension">
+                    <items>
+                        <nowPlayingView alignment="left" verticalAlignment="bottom" id="S9u-zA-24u"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="176" y="243"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -39,7 +128,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="677"/>
+            <point key="canvasLocation" x="176" y="677"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="B50-id-8pN">
@@ -55,7 +144,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="520" y="677"/>
+            <point key="canvasLocation" x="590" y="677"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="119" height="128"/>
+        <image name="play.fill" catalog="system" width="115" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="112"/>
+    </resources>
 </document>
